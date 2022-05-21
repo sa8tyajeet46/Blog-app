@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
 
+import DiamondSharpIcon from '@mui/icons-material/DiamondSharp';
+import Header from './components/Header';
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Blogs from './components/Blogs';
+import MyBlogs from './components/myBlogs';
+import AddBlog from './components/addBlog';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+  
+     <BrowserRouter>
+     <Header></Header>
+     <Routes>
+       <Route path="/login" element={<Login></Login>}></Route>
+       <Route path="/signup" element={<Signup></Signup>}></Route>
+       <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+       <Route path="/myblogs" element={<MyBlogs></MyBlogs>}></Route>
+       <Route path="/myblogs" element={<MyBlogs></MyBlogs>}></Route>
+       <Route path="/addblogs" element={<AddBlog></AddBlog>}></Route>
+       <Route path="*" ></Route>
+     </Routes>
+     </BrowserRouter>
     </div>
   );
 }
