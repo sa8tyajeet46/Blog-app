@@ -7,6 +7,7 @@ import Signup from './components/Signup';
 import Blogs from './components/Blogs';
 import MyBlogs from './components/myBlogs';
 import AddBlog from './components/addBlog';
+import { Hero } from './components/Hero ';
 function App() {
   return (
     <div className="">
@@ -14,6 +15,7 @@ function App() {
      <BrowserRouter>
      <Header></Header>
      <Routes>
+     <Route path="/" element={<Hero></Hero>}></Route>
        <Route path="/login" element={<Login></Login>}></Route>
        <Route path="/signup" element={<Signup></Signup>}></Route>
        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
